@@ -89,8 +89,13 @@ const Service = () => {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         >
           {servicesData.map((service) => (
-            <motion.div variants={cardVarients} className="text-center p-4 space-y-6">
+            <motion.div
+            key={service.id}
+              variants={cardVarients}
+              className="text-center p-4 space-y-6"
+            >
               <img
+                
                 src={service.image}
                 alt="products"
                 className="img-shadow2 max-w-[200px] mx-auto hover:scale-110 duration-300 cursor-pointer"

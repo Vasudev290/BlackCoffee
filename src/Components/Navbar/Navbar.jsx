@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = ({sidebar, setSidebar}) => {
   return (
-    <nav className="absolute top-0 left-0 w-full pt-10 text-white z-40">
+    <nav className="absolute top-0 left-0 w-full pt-10 text-white z-[9999]">
       <div className="container">
         <div className="flex justify-between items-center">
           {/* logo section */}
@@ -14,7 +14,7 @@ const Navbar = ({sidebar, setSidebar}) => {
               type: "spring",
               stiffness: 100,
               damping: 10,
-              delay: 0.3,
+              delay: 0.2,
             }}
             className="text-2xl font-semibold uppercase"
           >

@@ -1,0 +1,106 @@
+import {
+  FaFacebook,
+  FaGoogle,
+  FaInstagram,
+  FaPhoneAlt,
+  FaTelegram,
+} from "react-icons/fa";
+import { FaMapLocation } from "react-icons/fa6";
+import CreditCard from "../../assets/website/credit-cards.webp";
+import { motion } from "framer-motion";
+const Footer = () => {
+  return (
+    <div className="bg-gradient-to-r from-primary to-primaryDark pt-12 pb-8 text-white">
+      <div className="container">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Company Links section */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.2, delay: 0.6 }}
+            className="space-y-6"
+          >
+            <h1 className="text-3xl font-bold uppercase">Coders Cafe</h1>
+            <p className="text-sm max-w-[300px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              deserunt dicta quidem eius corrupti numquam veniam rerum!
+            </p>
+            <div>
+              <p className="flex items-center gap-2">
+                <FaPhoneAlt />
+                +1 (123) 456-7890
+              </p>
+              <p className="flex items-center gap-2 mt-2">
+                <FaMapLocation /> Bangalore, Karnakata
+              </p>
+            </div>
+          </motion.div>
+          {/* Footer Links section */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.6 }}
+            className="space-y-6"
+          >
+            <h1 className="text-3xl font-bold">Quick Links</h1>
+            <div className="grid grid-cols-2 gap-3">
+              {/* first column section */}
+              <div>
+                <ul className="space-y-2 cursor-pointer">
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Service</li>
+                  <li>Privacy Policy</li>
+                  <li>Conact Us</li>
+                </ul>
+              </div>
+              {/* second column section */}
+              <div>
+                <ul className="space-y-2 cursor-pointer">
+                  <li>Blogs</li>
+                  <li>Updates</li>
+                  <li>News</li>
+                  <li>Visions</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+          {/* Social Links section */}
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="space-y-6"
+          >
+            <h1 className="text-3xl font-bold">Follow Us</h1>
+            <div className="flex items-center gap-3">
+              <FaFacebook className="text-3xl hover:scale-105 duration-300" />
+              <FaGoogle className="text-3xl hover:scale-105 duration-300" />
+              <FaInstagram className="text-3xl hover:scale-105 duration-300" />
+              <FaTelegram className="text-3xl hover:scale-105 duration-300" />
+            </div>
+            <div>
+              <h1 className="text-xl mb-4 font-semibold">Payment Methods</h1>
+              <img src={CreditCard} alt="Credit Cards" className="w-[80%]" />
+            </div>
+          </motion.div>
+        </div>
+        {/* Copyrights section */}
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-white text-center mt-8 pt-7 border-t-2"
+        >
+          Copyright &copy; 2025 Coder's Coffee. All rights reserved.
+        </motion.p>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
